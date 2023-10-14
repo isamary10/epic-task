@@ -1,7 +1,7 @@
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+package br.com.fiap.epictask.task;
 
-@Repository
+import org.springframework.data.jpa.repository.JpaRepository;
+
 public interface TaskRepository extends JpaRepository<Task, Long>{
 
 }

@@ -16,9 +16,9 @@
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">EpicTask</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li class="active"><a href="/task">pendentes</a></li>
-        <li><a href="#">concluidas</a></li>
-        <li><a href="#">usuarios</a></li>
+        <li class="active"><a href="/task" th:text="#{task.pending}"></a></li>
+        <li><a href="#" th:text="#{task.done}"></a></li>
+        <li><a href="#" th:text="#{users}"></a></li>
         <li class="li-avatar">
 
           <!-- Dropdown Trigger -->

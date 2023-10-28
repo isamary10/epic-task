@@ -44,7 +44,7 @@ public class TaskController {
     return "redirect:/task";
   }
 
-  @GetMapping("new")
+  @GetMapping("/new")
   public String form(Task task){
     return "task/form";
   }
@@ -53,11 +53,12 @@ public class TaskController {
   public String Save(@Valid Task task, BindingResult result, RedirectAttributes redirect){
     if (result.hasErrors()) return "/task/form";
     service.save(task);
-    redirect.addFlashAttribute("sucess", getMessage("task.create.success"));
+    redirect.addFlashAttribute("success", getMessage("task.create.success"));
     return "redirect:/task";
   }
 
   private String getMessage(String code){
     return messageSource.getMessage(code, null, LocaleContextHolder.getLocale());
   }
+
 }
